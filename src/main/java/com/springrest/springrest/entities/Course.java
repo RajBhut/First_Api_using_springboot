@@ -12,6 +12,7 @@ public class Course {
 		this.description = description;
 	}
 
+	
 	public Course() {
 		super();
 		// TODO Auto-generated constructor stub

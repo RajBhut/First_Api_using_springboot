@@ -20,7 +20,7 @@ public class CourseServiceimpl implements CourseService {
 	
 	@Override
 	public List<Course> getCorses() {
-		// TODO Auto-generated method stub
+		
 		return list;
 	}
 

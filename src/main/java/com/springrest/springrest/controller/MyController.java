@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springrest.springrest.entities.Course;
+import com.springrest.springrest.entities.Student_details;
 import com.springrest.springrest.services.CourseService;
 import com.springrest.springrest.services.CourseServiceimpl;
+import com.springrest.springrest.services.StudentinfoService;
 
 //reprasantatial  state tranfer = "REST".
 
@@ -23,6 +25,8 @@ import com.springrest.springrest.services.CourseServiceimpl;
 public class MyController {
 	@Autowired
 	private CourseService courseService;
+	@Autowired
+	private StudentinfoService studentinfoservisce;
 	
 @GetMapping("/home")
 	public String home()
@@ -45,6 +49,11 @@ public Course getCourse(@PathVariable String courseId)
 public Course addCourse(@RequestBody Course course)
 {
 	return this.courseService.addCourse(course);
+}
+@GetMapping("/students")
+public List<Student_details> getallDetails()
+{
+	return this.studentinfoservisce.get_AllStudents();
 }
 
 }
